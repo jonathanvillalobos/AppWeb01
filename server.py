@@ -2,6 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+@app.route('/')
 @app.route('/home')
 def home():
     return render_template('index.html', titulo='Home', mensaje='Bienvenido a la página de inicio de UDL-ICO')
@@ -12,7 +13,7 @@ def servicios():
 
 @app.route('/contacto')
 def contacto():
-    return render_template('contacto.html', titulo='Contacto', mensaje='Contáctanos para más información')
+    return render_template('contactos.html', titulo='Contacto', mensaje='Contáctanos para más información')
 
 @app.route('/productos')
 def productos():
